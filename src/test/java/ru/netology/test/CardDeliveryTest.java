@@ -20,7 +20,7 @@ import static ru.netology.data.DataGenerator.generateDate;
 class CardDeliveryTest {
 
     @BeforeEach
-    static void setUpAll() {
+    void setUpAll() {
         SelenideLogger.addListener("allure", new AllureSelenide());
     }
 
