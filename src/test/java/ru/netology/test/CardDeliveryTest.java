@@ -19,8 +19,12 @@ import static ru.netology.data.DataGenerator.generateDate;
 
 class CardDeliveryTest {
 
-    @BeforeEach
-    void setUpAll() {
+    private final DataGenerator.UserInfo validUser = DataGenerator.Registrarion.generateUser("ru");
+    private final int daysToAddForFirstMeeting = 4;
+    private final String firstMeetingDate = DataGenerator.generateDate(daysToAddForFirstMeeting);
+
+    @BeforeAll
+    static void setUpAll() {
         SelenideLogger.addListener("allure", new AllureSelenide());
     }
 
